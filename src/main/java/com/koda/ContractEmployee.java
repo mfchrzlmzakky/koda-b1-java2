@@ -10,8 +10,8 @@ public class ContractEmployee extends Employee {
     if (amount >= 0) {
       increaseSalaryRule2(amount);
     } else {
-      System.out.println("Error: Kenaikan gaji harus lebih dari 0");
-      // throw new IllegalArgumentException("Kenaikan gaji harus lebih dari 0");
+      // System.out.println("Error: Kenaikan gaji harus lebih dari 0");
+      throw new IllegalArgumentException("Error: Kenaikan gaji harus lebih dari 0");
     }
   }
 }

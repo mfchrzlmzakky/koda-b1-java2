@@ -86,12 +86,22 @@ public abstract class Employee {
     salary += amount;
   }
 
+  // public void increaseSalaryRule2(int amount){
+  //   if (amount <= 500000) {
+  //     salary += amount;
+  //   } else {
+  //     System.out.println("Error: Kenaikan gaji tidak boleh lebih dari 500000");
+  //   }
+  // }
+
   public void increaseSalaryRule2(int amount){
-    if (amount <= 500000) {
+    try {
+      if (amount >= 500000) {
+        throw new IllegalArgumentException("Error: Kenaikan gaji tidak boleh lebih dari 500000");
+      } 
       salary += amount;
-    } else {
-      System.out.println("Error: Kenaikan gaji tidak boleh lebih dari 500000");
-      // throw new IllegalArgumentException("Error: Kenaikan gaji tidak boleh lebih dari 500000");
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
     }
   }
 
