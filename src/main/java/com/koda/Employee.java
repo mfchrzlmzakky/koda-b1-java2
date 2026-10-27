@@ -91,6 +91,7 @@ public abstract class Employee {
       salary += amount;
     } else {
       System.out.println("Error: Kenaikan gaji tidak boleh lebih dari 500000");
+      // throw new IllegalArgumentException("Error: Kenaikan gaji tidak boleh lebih dari 500000");
     }
   }
 

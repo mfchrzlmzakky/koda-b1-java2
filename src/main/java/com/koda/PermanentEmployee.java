@@ -11,6 +11,7 @@ public class PermanentEmployee extends Employee {
       increaseSalaryRule(amount);
     } else {
       System.out.println("Error: Kenaikan gaji harus lebih dari 0");
+      // throw new IllegalArgumentException("Error: Kenaikan gaji harus lebih dari 0");
     }
   }  
 }
